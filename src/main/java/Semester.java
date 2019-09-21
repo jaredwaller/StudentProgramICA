@@ -11,9 +11,31 @@
 import java.util.*;
 
 public class Semester {
+    //Semester Attributes
     private String name;
+    
+    //Again you must initialize (create) your course object
     private Course course = new Course();
+    
+    /******IMPORTANT*****
+    *  A default constructor for a nested object is super duper important.
+    *  This is to create the semester inside the student class
+    *  without having to enter values like we did to Student in the
+    *  'StudentMain' class. With this, we don't have to assign any value to the 
+    *  semester that is initialized inside the student object.
+    *  We can just say our student has a semester without saying what the name
+    *  is and what the courses are.
+    */
+    public Semester(){}
+    
+    public Semester(String name, Course[] courses)
+    {
+        this.name = name;
+        this.course = course;
+    }
+    
 
+    //Getters and setters
     public String getName() {
         return name;
     }
@@ -30,24 +52,6 @@ public class Semester {
         this.course = course;
     }
     
-    public Semester(String name, Course[] courses)
-    {
-        this.name = name;
-        this.course = course;
-        Scanner in = new Scanner(System.in);
-        course.setName(in.next());
-                
-        for(int i = 0; i < 3; i++)
-        {
-            System.out.println("Enter student test #" + (i+1) + ": ");
-            
-            //add next int to a new test
-            course.setTestScore(i, in.nextInt());
-            
-        }
-    }
-    
-    public Semester(){}
-    
+        
     
 }

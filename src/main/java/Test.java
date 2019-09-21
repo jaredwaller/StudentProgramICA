@@ -10,14 +10,16 @@
  */
 public class Test {
     
+    //Test Attributes
     int grade;
+    
+    
+    public Test(){}
     
     public Test(int grade)
     {
         this.grade = grade;
     }
-    
-    public Test(){}
     
     public int getGrade()
     {
