@@ -20,17 +20,17 @@ public class StudentMain {
         
         //Ask the user for the first name and save it into the String fname
         System.out.print("Enter student first name: ");
-        String fname = in.next();
+        String fname = in.nextLine();
         
         
         //Ask the user for the last name and save it into the String lname
         System.out.print("Enter student last name: ");
-        String lname = in.next();
+        String lname = in.nextLine();
         
         
         //Ask the user for the major and save it into the String major
         System.out.print("Enter student major: ");
-        String major = in.next();
+        String major = in.nextLine();
         
         
         //take the saved input from the Strings: 'major', 'lname', and 'fname' 
@@ -58,8 +58,8 @@ public class StudentMain {
             any custom functions). So let's set the semester's name to what
             the user enters by saying, setName( in.next() ). Easy right?
         */
-        System.out.println("Enter the semester name: ");
-        s1.getSemester().setName(in.next());
+        System.out.print("Enter the semester name: ");
+        s1.getSemester().setName(in.nextLine());
         
         /*
             Let's use the same logic here, but we must go farther into the
@@ -68,8 +68,8 @@ public class StudentMain {
             by using getCourse(). Now, we have access to all of course's
             functions. Let's set the course's name to the user input.
         */
-        System.out.println("Enter the course name: ");
-        s1.getSemester().getCourse().setName(in.next());
+        System.out.print("Enter the course name: ");
+        s1.getSemester().getCourse().setName(in.nextLine());
         
         /*
             Now, let's get some test scores for our 3 tests. We will use a for
